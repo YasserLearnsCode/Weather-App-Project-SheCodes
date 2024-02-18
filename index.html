@@ -4,20 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>My Weather App Project</title>
   </head>
   <body>
     <header>
       <h1>
         <span class="city-element" id="js-city-element">Vancouver</span> <br />
-        <span class="temp-element">0<span class="metric">&deg;</span> </span>
-        <br />
-        <span class="condition">
-          <span>sunny</span> <br />
-          H:
-          <span>12</span>&deg; L: <span>15</span>&deg;</span
-        >
+        <span class="city-temp">
+          <span class="temp-element" id="js-temp-element">0</span
+          ><span class="metric">&deg;C</span>
+        </span>
       </h1>
+      <p class="condition">
+        Tuesday 14:23 sunny conditions expected. <br />
+        Humidity: <span class="percent">10%</span> &nbsp; Wind:
+        <span class="speed">3km</span>
+      </p>
     </header>
 
     <main>
@@ -39,10 +42,7 @@
         </form>
       </div>
       <div>
-        <p>
-          Tuesday 14:23 sunny conditions expected, <br />
-          Humidity: 10% Wind: 3km
-        </p>
+        <p></p>
       </div>
       <div>
         <!-- 

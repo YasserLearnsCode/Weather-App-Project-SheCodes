@@ -21,6 +21,28 @@ footer {
   font-size: 1.3em;
 }
 
+.temp-element {
+  display: flex;
+}
+
+.metric {
+  display: flex;
+  font-size: 24px;
+}
+
+.city-temp {
+  display: inline-flex;
+  color: blue;
+  margin-top: 15px;
+}
+
+.percent {
+  color: orangered;
+}
+
+.speed {
+  color: orangered;
+}
 .search-form-input {
   background-color: lightgray;
   width: 70%;
@@ -43,9 +65,9 @@ footer {
 }
 
 .condition {
-  font-size: 22px;
+  font-size: 18px;
+  font-weight: normal;
 }
 .temp-element {
   font-size: 2.5em;
 }
-
