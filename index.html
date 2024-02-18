@@ -9,32 +9,40 @@
   <body>
     <header>
       <h1>
-        Vancouver <br />
-        <span class="temp-element">0<span class="metric">&deg;</span> </span> <br>
-        <span class="condition">  
+        <span class="city-element" id="js-city-element">Vancouver</span> <br />
+        <span class="temp-element">0<span class="metric">&deg;</span> </span>
+        <br />
+        <span class="condition">
           <span>sunny</span> <br />
-        H:
-        <span>12</span>&deg; L: 
-        <span>15</span>&deg;</span>
+          H:
+          <span>12</span>&deg; L: <span>15</span>&deg;</span
+        >
       </h1>
-  
     </header>
 
     <main>
       <div>
-        <form class="search-form">
+        <form class="search-form" id="js-search-form">
           <input
             type="text"
             placeholder="Enter City ...."
             required
             class="search-form-input"
+            id="js-search-form-input"
           />
-          <input type="submit" value="Search" class="search-button" />
+          <input
+            type="submit"
+            value="Search"
+            class="search-button"
+            id="js-search-button"
+          />
         </form>
       </div>
       <div>
-        <p>Tuesday 14:23 sunny conditions expected, <br>
-          Humidity: 10% Wind: 3km</p>
+        <p>
+          Tuesday 14:23 sunny conditions expected, <br />
+          Humidity: 10% Wind: 3km
+        </p>
       </div>
       <div>
         <!-- 
@@ -64,5 +72,6 @@
       & open sourced on
       <a href="" target="_blank">Netlify</a>
     </footer>
+    <script src="src/scripts.js"></script>
   </body>
 </html>
