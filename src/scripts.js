@@ -1,8 +1,26 @@
-let date = new Date;
-console.log(date)
+let date = new Date();
 
 function currentTime() {
-  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  let dayElement = document.querySelector("#js-day");
+  dayElement.innerHTML = day;
+
+  let hour = date.getHours();
+  let hourElement = document.querySelector("#js-hour");
+  hourElement.innerHTML = hour;
+
+  let minutes = date.getMinutes();
+  let minutesElement = document.querySelector("#js-minutes");
+  minutesElement.innerHTML = minutes;
 }
 
 function cityTemperature(response) {
@@ -29,6 +47,7 @@ function searchCity(city) {
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
 
   axios.get(apiUrl).then(cityTemperature);
+  currentTime();
 }
 
 function searchSubmit(event) {
