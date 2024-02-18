@@ -1,0 +1,14 @@
+body {
+  background-color: lightgrey;
+  margin: 0 auto;
+  text-align: center;
+}
+
+main,
+footer {
+  background-color: white;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
