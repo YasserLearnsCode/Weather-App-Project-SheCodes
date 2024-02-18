@@ -15,10 +15,20 @@ function currentTime() {
   dayElement.innerHTML = day;
 
   let hour = date.getHours();
+
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+
   let hourElement = document.querySelector("#js-hour");
   hourElement.innerHTML = hour;
 
   let minutes = date.getMinutes();
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
   let minutesElement = document.querySelector("#js-minutes");
   minutesElement.innerHTML = minutes;
 }
