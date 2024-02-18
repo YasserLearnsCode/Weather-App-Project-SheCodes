@@ -8,74 +8,83 @@
     <title>My Weather App Project</title>
   </head>
   <body>
-    <header>
-      <h1>
-        <span class="city-element" id="js-city-element"></span> <br />
-        <span class="city-temp">
-          <span class="temp-element" id="js-temp-element"></span
-          ><span class="metric">&deg;C</span>
-        </span>
-      </h1>
-      <p class="condition">
-        <span id="js-day"></span>
-        <span id="js-hour"></span>:<span id="js-minutes"></span>,
-        <span id="js-conditions"></span> <br />
-        Humidity: <span class="humidity" id="js-humidity"></span
-        ><span class="humidity">%</span> &nbsp; Wind:
-        <span class="wind-speed" id="js-wind-speed"></span
-        ><span class="wind-speed">km/h</span>
-      </p>
-    </header>
+    <div class="body-container">
+      <header>
+        <h1>
+          <span class="city-element" id="js-city-element"></span> <br />
+          <span class="city-temp">
+            <span class="temp-element" id="js-temp-element"></span
+            ><span class="metric">&deg;C</span>
+          </span>
+        </h1>
+        <p class="condition">
+          <span id="js-day"></span>
+          <span id="js-hour"></span>:<span id="js-minutes"></span>,
+          <span id="js-conditions"></span> <br />
+          Humidity: <span class="humidity" id="js-humidity"></span
+          ><span class="humidity">%</span> &nbsp; Wind:
+          <span class="wind-speed" id="js-wind-speed"></span
+          ><span class="wind-speed">km/h</span>
+        </p>
+      </header>
 
-    <main>
-      <div>
-        <form class="search-form" id="js-search-form">
-          <input
-            type="text"
-            placeholder="Enter City ...."
-            required
-            class="search-form-input"
-            id="js-search-form-input"
-          />
-          <input
-            type="submit"
-            value="Search"
-            class="search-button"
-            id="js-search-button"
-          />
-        </form>
-      </div>
-      <div>
-        <p></p>
-      </div>
-      <div>
-        <!-- 
-        <div>5-DAY FORECAST</div>
+      <main>
         <div>
-            <ul>
-              <li>Mon</li>
-              <li>☀️</li>
-              <li><span>12</span>&deg; | <span>15</span>&deg;</li>
-            </ul>
+          <form class="search-form" id="js-search-form">
+            <input
+              type="text"
+              placeholder="Enter City ...."
+              required
+              class="search-form-input"
+              id="js-search-form-input"
+            />
+            <input
+              type="submit"
+              value="Search"
+              class="search-button"
+              id="js-search-button"
+            />
+          </form>
         </div>
-        -->
-      </div>
-    </main>
+        <div>
+          <p></p>
+        </div>
 
-    <footer>
-      Coded by
-      <a href="https://github.com/YasserLearnsCode" target="_blank"
-        >Yasser Kabulimbo</a
-      >. Hosted
-      <a
-        href="https://github.com/YasserLearnsCode/Weather-App-Project-SheCodes"
-        target="_blank"
-      >
-        on Github</a
-      >
-      & open sourced on
-      <a href="" target="_blank">Netlify</a>
-    </footer>
-    <script src="src/scripts.js"></script>
+        <div>
+          <div class="forecast">5-DAY FORECAST</div>
+
+          <div class="first-day">
+            <div class="row">
+              <div class="col">
+                <span id="js-forecast-day">Mon</span>
+              </div>
+              <div class="col">
+                <span id="js-forecast-icon">☀️</span>
+              </div>
+              <div class="col">
+                <span id="js-forecast-temp-max">15</span>&deg; &nbsp; &nbsp;|
+                <span id="js-forecast-temp-min"> &nbsp; &nbsp;12</span>&deg;
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        Coded by
+        <a href="https://github.com/YasserLearnsCode" target="_blank"
+          >Yasser Kabulimbo</a
+        >. Hosted
+        <a
+          href="https://github.com/YasserLearnsCode/Weather-App-Project-SheCodes"
+          target="_blank"
+        >
+          on Github</a
+        >
+        & open sourced on
+        <a href="" target="_blank">Netlify</a>
+      </footer>
+      <script src="src/scripts.js"></script>
+    </div>
   </body>
 </html>
