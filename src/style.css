@@ -14,7 +14,7 @@ footer {
 }
 
 footer {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .search-form-input {
@@ -34,4 +34,12 @@ footer {
   border-radius: 10px;
   border: none;
   padding: 15px;
+  font-size: 16px;
+}
+
+.condition {
+  font-size: 22px;
+}
+.temp-element {
+  font-size: 2.5em;
 }
