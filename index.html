@@ -10,7 +10,6 @@
     <header>
       <h1>
         Vancouver <br />
-        <span>☀️ </span>
         <span>0&deg; </span>
       </h1>
       <h2>
@@ -22,16 +21,19 @@
 
     <main>
       <div>
-        <form>
-          <input type="text" placeholder="Enter City ...." required />
-          <input type="submit" value="Search" />
+        <form class="search-form">
+          <input
+            type="text"
+            placeholder="Enter City ...."
+            required
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-button" />
         </form>
       </div>
       <div>
-        <p>
-          Snowy conditions expected, <br />
-          Humidity: 10% Wind: 3km
-        </p>
+        <p>Tuesday 14:23 snowy conditions expected, <br>
+          Humidity: 10% Wind: 3km</p>
       </div>
       <div>
         <!-- 
@@ -48,17 +50,17 @@
     </main>
 
     <footer>
-      This page was coded by
+      Coded by
       <a href="https://github.com/YasserLearnsCode" target="_blank"
         >Yasser Kabulimbo</a
-      >. The code is
+      >. Hosted
       <a
         href="https://github.com/YasserLearnsCode/Weather-App-Project-SheCodes"
         target="_blank"
       >
-        hosted on Github</a
+        on Github</a
       >
-      and open sourced on
+      & open sourced on
       <a href="" target="_blank">Netlify</a>
     </footer>
   </body>

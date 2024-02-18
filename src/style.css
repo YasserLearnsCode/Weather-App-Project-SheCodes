@@ -12,3 +12,26 @@ footer {
   padding: 20px;
   border-radius: 10px;
 }
+
+footer {
+  font-size: 12px;
+}
+
+.search-form-input {
+  background-color: lightgray;
+  width: 70%;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.search-button {
+  background-color: black;
+  color: white;
+  width: 20%;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+}
