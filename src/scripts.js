@@ -1,3 +1,10 @@
+let date = new Date;
+console.log(date)
+
+function currentTime() {
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+}
+
 function cityTemperature(response) {
   let temp = Math.round(response.data.temperature.current);
   let tempElement = document.querySelector("#js-temp-element");
@@ -5,6 +12,16 @@ function cityTemperature(response) {
 
   let cityElement = document.querySelector("#js-city-element");
   cityElement.innerHTML = response.data.city;
+
+  let conditionsElement = document.querySelector("#js-conditions");
+  conditionsElement.innerHTML = response.data.condition.description;
+
+  let humidityElement = document.querySelector("#js-humidity");
+  humidityElement.innerHTML = response.data.temperature.humidity;
+
+  let windSpeed = response.data.wind.speed;
+  let windSpeedElement = document.querySelector("#js-wind-speed");
+  windSpeedElement.innerHTML = Math.round(windSpeed);
 }
 
 function searchCity(city) {

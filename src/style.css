@@ -36,11 +36,11 @@ footer {
   margin-top: 15px;
 }
 
-.percent {
+.humidity {
   color: orangered;
 }
 
-.speed {
+.wind-speed {
   color: orangered;
 }
 .search-form-input {
