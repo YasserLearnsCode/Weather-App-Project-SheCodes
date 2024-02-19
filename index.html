@@ -7,29 +7,10 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>My Weather App Project</title>
   </head>
+
   <body>
     <div class="body-container">
       <header>
-        <h1>
-          <span class="city-element" id="js-city-element"></span> <br />
-          <span class="city-temp">
-            <span class="temp-element" id="js-temp-element"></span
-            ><span class="metric">&deg;C</span>
-          </span>
-        </h1>
-        <p class="condition">
-          <span id="js-day"></span>
-          <span id="js-hour"></span>:<span id="js-minutes"></span>,
-          <span id="js-conditions"></span> <br />
-          Humidity: <span class="humidity" id="js-humidity"></span
-          ><span class="humidity">%</span> &nbsp; Wind:
-          <span class="wind-speed" id="js-wind-speed"></span
-          ><span class="wind-speed">km/h</span>
-        </p>
-      </header>
-
-      <main>
-        <div>
           <form class="search-form" id="js-search-form">
             <input
               type="text"
@@ -45,30 +26,60 @@
               id="js-search-button"
             />
           </form>
-        </div>
-        <div>
-          <p></p>
-        </div>
+      </header>     
 
-        <div>
-          <div class="forecast-title">5-DAY FORECAST</div>
+      <main>
+        <div class="current-weather-condition">
+          <h1>
+            <span class="city-element" id="js-city-element"></span> <br />
+            <span class="city-temp">
+              <span class="temp-element" id="js-temp-element"></span
+              ><span class="metric">&deg;C</span>
+            </span>
+          </h1>
 
-          <div class="forecast" id="js-forecast">
-            <div class="row">
-              <div class="col">
-                <span id="js-forecast-day">Mon</span>
-              </div>
-              <div class="col">
-                <span id="js-forecast-icon">☀️</span>
-              </div>
-              <div class="col">
-                <div class="forecast-temp">
-                  <strong> <span class="forecast-temp-max" id="js-forecast-temp-max">15</span>&deg; </strong> &nbsp; &nbsp;
-                  <span id="js-forecast-temp-min"> &nbsp; &nbsp;12</span>&deg;
-                </div>
-              </div>
+          <div class="condition">
+            <p>Max: <span class="daily-max" id="js-daily-max"></span>&deg; &nbsp;Min: <span class="daily-min" id="js-daily-min"></span>&deg;</p>
+            <strong><span class="day" id="js-day"></span>
+            <span class="hour" id="js-hour"></span>:<span id="js-minutes"></span></strong>,
+            <span id="js-conditions"></span> <br />
+            Humidity: <span class="humidity" id="js-humidity"></span
+            ><span class="humidity">%</span> &nbsp; Wind:
+            <span class="wind-speed" id="js-wind-speed"></span
+            ><span class="wind-speed">km/h</span>
             </div>
           </div>
+
+  
+          <div class="forecast-container">
+            <div class="forecast-title">5-DAY FORECAST</div>
+
+            <div class="forecast" id="js-forecast">
+              <div class="row">
+
+                <div class="col">
+                  <span id="js-forecast-day"></span>
+                </div>
+                <div class="col icon-col">
+                  <span id="js-forecast-icon"></span>
+                </div>
+
+                <div class="col">
+                  <div class="forecast-temp">
+                    <strong>
+                      <span
+                        class="forecast-temp-max"
+                        id="js-forecast-temp-max"
+                      ></span>&deg;
+                    </strong>&nbsp; &nbsp;
+                      <span id="js-forecast-temp-min"> &nbsp;</span>&deg;
+                  </div>
+
+                </div>
+
+                </div>
+              </div>
+
         </div>
       </main>
 

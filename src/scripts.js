@@ -38,6 +38,7 @@ function cityTemperature(response) {
   let tempElement = document.querySelector("#js-temp-element");
   tempElement.innerHTML = temp;
 
+
   let cityElement = document.querySelector("#js-city-element");
   cityElement.innerHTML = response.data.city;
 
@@ -90,10 +91,18 @@ function getCityForecast(city) {
 }
 
 function updateDailyForecast(response) {
-  
+
   let forecastHtml = "";
 
-  response.data.daily.forEach(function (day) {
+  response.data.daily.forEach(function (day, index) {
+
+    let maxElement = document.querySelector("#js-daily-max");
+    maxElement.innerHTML = Math.round(day.temperature.maximum);
+
+    let minElement = document.querySelector("#js-daily-min");
+    minElement.innerHTML = Math.round(day.temperature.minimum);
+
+    if (index < 5) {
     forecastHtml =
       forecastHtml +
       `<div class="forecast" id="js-forecast">
@@ -103,7 +112,9 @@ function updateDailyForecast(response) {
               </div>
               <div class="col">
                 <span id="js-forecast-icon">
-                <img src="${day.condition.icon_url}" /></span>
+                <img src="${
+                  day.condition.icon_url
+                }" class="forecast-icon"  /></span>
               </div>
               <div class="col">
                 <div class="forecast-temp">
@@ -117,6 +128,7 @@ function updateDailyForecast(response) {
               </div>
             </div>
           </div>`;
+       }
   });
 
   let forecastElement = document.querySelector("#js-forecast");
