@@ -51,7 +51,6 @@ function cityTemperature(response) {
   let windSpeedElement = document.querySelector("#js-wind-speed");
   windSpeedElement.innerHTML = Math.round(windSpeed);
 
-  updateDailyForecast(response.data.city);
 }
 
 function searchCity(city) {
@@ -67,12 +66,21 @@ function searchSubmit(event) {
   let searchInputElement = document.querySelector("#js-search-form-input");
 
   searchCity(searchInputElement.value);
+  getCityForecast(searchInputElement.value);
 }
 
 let searchForm = document.querySelector("#js-search-form");
 searchForm.addEventListener("submit", searchSubmit);
 
 searchCity("Vancouver");
+getCityForecast("Vancouver")
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
 
 function getCityForecast(city) {
   let apiKey = "1d4e1fa31e8d90b62bfb5t73ob432508";
@@ -81,15 +89,8 @@ function getCityForecast(city) {
   axios.get(apiUrl).then(updateDailyForecast);
 }
 
-function formatDay(timestamp) {
-  let days = new Date(timestamp * 1000);
-  let day = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
-
-  return days[data.getDay()];
-}
-
 function updateDailyForecast(response) {
-  console.log(response.data);
+  
   let forecastHtml = "";
 
   response.data.daily.forEach(function (day) {
@@ -101,12 +102,17 @@ function updateDailyForecast(response) {
                 <span id="js-forecast-day">${formatDay(day.time)}</span>
               </div>
               <div class="col">
-                <span id="js-forecast-icon">☀️</span>
+                <span id="js-forecast-icon">
+                <img src="${day.condition.icon_url}" /></span>
               </div>
               <div class="col">
                 <div class="forecast-temp">
-                  <strong> <span class="forecast-temp-max" id="js-forecast-temp-max">15</span>&deg; </strong> &nbsp; &nbsp;
-                  <span id="js-forecast-temp-min"> &nbsp; &nbsp;12</span>&deg;
+                  <strong> <span class="forecast-temp-max" id="js-forecast-temp-max">${Math.round(
+                    day.temperature.maximum
+                  )}</span>&deg; </strong> &nbsp; &nbsp;
+                  <span id="js-forecast-temp-min"> &nbsp;${Math.round(
+                    day.temperature.minimum
+                  )}</span>&deg;
                 </div>
               </div>
             </div>
