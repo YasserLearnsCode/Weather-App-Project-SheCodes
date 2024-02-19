@@ -50,6 +50,8 @@ function cityTemperature(response) {
   let windSpeed = response.data.wind.speed;
   let windSpeedElement = document.querySelector("#js-wind-speed");
   windSpeedElement.innerHTML = Math.round(windSpeed);
+
+  updateDailyForecast(response.data.city);
 }
 
 function searchCity(city) {
@@ -71,3 +73,48 @@ let searchForm = document.querySelector("#js-search-form");
 searchForm.addEventListener("submit", searchSubmit);
 
 searchCity("Vancouver");
+
+function getCityForecast(city) {
+  let apiKey = "1d4e1fa31e8d90b62bfb5t73ob432508";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(updateDailyForecast);
+}
+
+function formatDay(timestamp) {
+  let days = new Date(timestamp * 1000);
+  let day = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+
+  return days[data.getDay()];
+}
+
+function updateDailyForecast(response) {
+  console.log(response.data);
+  let forecastHtml = "";
+
+  response.data.daily.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="forecast" id="js-forecast">
+            <div class="row">
+              <div class="col">
+                <span id="js-forecast-day">${formatDay(day.time)}</span>
+              </div>
+              <div class="col">
+                <span id="js-forecast-icon">☀️</span>
+              </div>
+              <div class="col">
+                <div class="forecast-temp">
+                  <strong> <span class="forecast-temp-max" id="js-forecast-temp-max">15</span>&deg; </strong> &nbsp; &nbsp;
+                  <span id="js-forecast-temp-min"> &nbsp; &nbsp;12</span>&deg;
+                </div>
+              </div>
+            </div>
+          </div>`;
+  });
+
+  let forecastElement = document.querySelector("#js-forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
+updateDailyForecast();

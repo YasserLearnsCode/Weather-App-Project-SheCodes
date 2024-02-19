@@ -51,9 +51,9 @@
         </div>
 
         <div>
-          <div class="forecast">5-DAY FORECAST</div>
+          <div class="forecast-title">5-DAY FORECAST</div>
 
-          <div class="first-day">
+          <div class="forecast" id="js-forecast">
             <div class="row">
               <div class="col">
                 <span id="js-forecast-day">Mon</span>
@@ -62,8 +62,10 @@
                 <span id="js-forecast-icon">☀️</span>
               </div>
               <div class="col">
-                <span id="js-forecast-temp-max">15</span>&deg; &nbsp; &nbsp;|
-                <span id="js-forecast-temp-min"> &nbsp; &nbsp;12</span>&deg;
+                <div class="forecast-temp">
+                  <strong> <span class="forecast-temp-max" id="js-forecast-temp-max">15</span>&deg; </strong> &nbsp; &nbsp;
+                  <span id="js-forecast-temp-min"> &nbsp; &nbsp;12</span>&deg;
+                </div>
               </div>
             </div>
           </div>
