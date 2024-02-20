@@ -11,22 +11,22 @@
   <body>
     <div class="body-container">
       <header>
-          <form class="search-form" id="js-search-form">
-            <input
-              type="text"
-              placeholder="Enter City ...."
-              required
-              class="search-form-input"
-              id="js-search-form-input"
-            />
-            <input
-              type="submit"
-              value="Search"
-              class="search-button"
-              id="js-search-button"
-            />
-          </form>
-      </header>     
+        <form class="search-form" id="js-search-form">
+          <input
+            type="text"
+            placeholder="Enter City ...."
+            required
+            class="search-form-input"
+            id="js-search-form-input"
+          />
+          <input
+            type="submit"
+            value="Search"
+            class="search-button"
+            id="js-search-button"
+          />
+        </form>
+      </header>
 
       <main>
         <div class="current-weather-condition">
@@ -39,47 +39,46 @@
           </h1>
 
           <div class="condition">
-            <p>Max: <span class="daily-max" id="js-daily-max"></span>&deg; &nbsp;Min: <span class="daily-min" id="js-daily-min"></span>&deg;</p>
-            <strong><span class="day" id="js-day"></span>
-            <span class="hour" id="js-hour"></span>:<span id="js-minutes"></span></strong>,
-            <span id="js-conditions"></span> <br />
+            <strong
+              ><span class="day" id="js-day"></span>
+              <span class="hour" id="js-hour"></span>:<span
+                id="js-minutes"
+              ></span></strong
+            >, <span id="js-conditions"></span> <br />
             Humidity: <span class="humidity" id="js-humidity"></span
             ><span class="humidity">%</span> &nbsp; Wind:
             <span class="wind-speed" id="js-wind-speed"></span
             ><span class="wind-speed">km/h</span>
-            </div>
           </div>
+        </div>
 
-  
-          <div class="forecast-container">
-            <div class="forecast-title">5-DAY FORECAST</div>
+        <div class="forecast-container">
+          <div class="forecast-title">5-DAY FORECAST</div>
 
-            <div class="forecast" id="js-forecast">
-              <div class="row">
-
-                <div class="col">
-                  <span id="js-forecast-day"></span>
-                </div>
-                <div class="col icon-col">
-                  <span id="js-forecast-icon"></span>
-                </div>
-
-                <div class="col">
-                  <div class="forecast-temp">
-                    <strong>
-                      <span
-                        class="forecast-temp-max"
-                        id="js-forecast-temp-max"
-                      ></span>&deg;
-                    </strong>&nbsp; &nbsp;
-                      <span id="js-forecast-temp-min"> &nbsp;</span>&deg;
-                  </div>
-
-                </div>
-
-                </div>
+          <div class="forecast" id="js-forecast">
+            <div class="row">
+              <div class="col">
+                <span class="forecast-day" id="js-forecast-day"></span>
+              </div>
+              <div class="col icon-col">
+                <span id="js-forecast-icon"></span>
               </div>
 
+              <div class="col">
+                <div class="forecast-temp">
+                  <strong>
+                    <span class="forecast-temp-max-color">
+                    <span
+                      class="forecast-temp-max"
+                      id="js-forecast-temp-max"
+                    ></span
+                    >&deg; </span></strong
+                  >&nbsp; &nbsp; <span class="forecast-temp-min-color">
+                  <span id="js-forecast-temp-min"> &nbsp;</span>&deg; </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
 

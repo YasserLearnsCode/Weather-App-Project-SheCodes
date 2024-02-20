@@ -1,6 +1,8 @@
 let date = new Date();
 
 function currentTime() {
+
+
   let days = [
     "Sunday",
     "Monday",
@@ -95,20 +97,16 @@ function updateDailyForecast(response) {
   let forecastHtml = "";
 
   response.data.daily.forEach(function (day, index) {
-
-    let maxElement = document.querySelector("#js-daily-max");
-    maxElement.innerHTML = Math.round(day.temperature.maximum);
-
-    let minElement = document.querySelector("#js-daily-min");
-    minElement.innerHTML = Math.round(day.temperature.minimum);
-
+    
     if (index < 5) {
     forecastHtml =
       forecastHtml +
       `<div class="forecast" id="js-forecast">
             <div class="row">
               <div class="col">
-                <span id="js-forecast-day">${formatDay(day.time)}</span>
+                <span class="forecast-day" id="js-forecast-day">${formatDay(
+                  day.time
+                )}</span>
               </div>
               <div class="col">
                 <span id="js-forecast-icon">
@@ -118,17 +116,17 @@ function updateDailyForecast(response) {
               </div>
               <div class="col">
                 <div class="forecast-temp">
-                  <strong> <span class="forecast-temp-max" id="js-forecast-temp-max">${Math.round(
+                  <strong> <span class="forecast-temp-max-color"> <span class="forecast-temp-max" id="js-forecast-temp-max">${Math.round(
                     day.temperature.maximum
-                  )}</span>&deg; </strong> &nbsp; &nbsp;
-                  <span id="js-forecast-temp-min"> &nbsp;${Math.round(
+                  )}</span>&deg; </span> </strong> &nbsp; &nbsp;
+                  <span id="js-forecast-temp-min"> &nbsp; <span class="daily-min-color"> ${Math.round(
                     day.temperature.minimum
-                  )}</span>&deg;
+                  )}</span>&deg; </span>
                 </div>
               </div>
             </div>
           </div>`;
-       }
+                  }
   });
 
   let forecastElement = document.querySelector("#js-forecast");

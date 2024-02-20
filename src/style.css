@@ -1,5 +1,5 @@
 body {
-  background-color: #7699c05b;
+  background-color: white;
   text-align: center;
 }
 
@@ -8,10 +8,11 @@ body {
   margin: 0 auto;
 }
 .forecast-container,
-footer, header {
-  background-color: white;
+footer,
+header {
+  background-color: #7699c05b;
   max-width: 500px;
-  margin: 20px auto;
+  margin: 10px auto;
   padding: 20px;
   border-radius: 10px;
 }
@@ -29,8 +30,8 @@ footer {
 }
 
 .metric {
-  display: flex;
-  font-size: 24px;
+  display: inline-flex;
+  font-size: 22px;
 }
 
 .city-temp {
@@ -43,11 +44,17 @@ footer {
   color: rgb(228, 65, 5);
 }
 
-.wind-speed {
+.wind-speed,
+.daily-max-color,
+.daily-min-color {
   color: rgb(228, 65, 5);
 }
+
+.forecast-day {
+  color: rgba(0, 0, 0, 0.711);
+}
+
 .search-form-input {
-  background-color: #7699c05b;
   width: 70%;
   padding: 15px;
   border-radius: 10px;
@@ -57,6 +64,7 @@ footer {
   cursor: pointer;
   color: black;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .search-button {
@@ -71,7 +79,7 @@ footer {
 }
 
 .condition {
-  font-size: 18px;
+  font-size: 13px;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.711);
 }
@@ -80,11 +88,12 @@ footer {
 }
 
 .forecast-title {
-  text-align: left;
-  margin-top: 30px;
+  
+  margin-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid lightgray;
   margin-bottom: 10px;
+  font-size: 16px;
 }
 
 .row {
@@ -92,27 +101,27 @@ footer {
   width: 100%;
   table-layout: fixed;
   border-spacing: 10px;
-  text-align: justify;
   border-bottom: 1px solid lightgray;
 }
 
 .col {
   display: table-cell;
-  
 }
 
 .forecast {
-  padding-bottom: 15px;
-  
+  padding-bottom: 5px;
 }
 
-.forecast-temp {
+.forecast-temp-max-color {
   color: rgb(228, 65, 5);
 }
 
 .forecast-icon {
   width: 70px;
-  
 }
 
+.daily-min-color,
+.forecast-day {
+  color: rgba(0, 0, 0, 0.711);
+}
 
