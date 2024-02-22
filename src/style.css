@@ -55,7 +55,7 @@ footer {
 }
 
 .search-form-input {
-  width: 70%;
+  width: 60%;
   padding: 15px;
   border-radius: 10px;
   border: none;
@@ -88,7 +88,6 @@ footer {
 }
 
 .forecast-title {
-  
   margin-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid lightgray;
@@ -124,4 +123,3 @@ footer {
 .forecast-day {
   color: rgba(0, 0, 0, 0.711);
 }
-
