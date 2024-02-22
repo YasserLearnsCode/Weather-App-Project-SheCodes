@@ -8,8 +8,8 @@ body {
   margin: 0 auto;
 }
 .forecast-container,
-footer,
-header {
+footer
+ {
   background-color: #7699c05b;
   max-width: 500px;
   margin: 10px auto;
@@ -17,6 +17,13 @@ header {
   border-radius: 10px;
 }
 
+header {
+ background-color: #7699c05b;
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+}
 footer {
   font-size: 14px;
 }
