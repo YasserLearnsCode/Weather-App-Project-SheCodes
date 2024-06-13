@@ -10,7 +10,7 @@ body {
 .forecast-container,
 footer
  {
-  background-color: #7699c05b;
+  background-color: rgb(254, 250, 247, 100%);
   max-width: 500px;
   margin: 10px auto;
   padding: 20px;
@@ -18,12 +18,38 @@ footer
 }
 
 header {
- background-color: #7699c05b;
+ background-color: rgb(254, 250, 247, 100%);
   max-width: 500px;
   margin: 10px auto;
   padding: 10px;
   border-radius: 10px;
 }
+
+.search-form-input {
+  width: 60%;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  margin-right: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.search-button {
+  text-align: center;
+  background-color: rgb(219, 78, 78, 100%);
+  color: white;
+  width: 20%;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
 footer {
   font-size: 14px;
 }
@@ -43,47 +69,22 @@ footer {
 
 .city-temp {
   display: inline-flex;
-  color: rgba(0, 0, 255, 0.864);
+  color:rgb(219, 78, 78, 100%);
   margin-top: 15px;
 }
 
 .humidity {
-  color: rgb(228, 65, 5);
+  color: rgb(255, 108, 99, 100%);
 }
 
 .wind-speed,
 .daily-max-color,
 .daily-min-color {
-  color: rgb(228, 65, 5);
+  color: rgb(255, 108, 99, 100%);
 }
 
 .forecast-day {
   color: rgba(0, 0, 0, 0.711);
-}
-
-.search-form-input {
-  width: 60%;
-  padding: 15px;
-  border-radius: 10px;
-  border: none;
-  margin-right: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  color: black;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.search-button {
-  text-align: center;
-  background-color: rgba(0, 0, 255, 0.864);
-  color: white;
-  width: 20%;
-  border-radius: 10px;
-  border: none;
-  padding: 15px;
-  font-size: 16px;
-  margin-top: 10px;
 }
 
 .condition {
@@ -120,7 +121,7 @@ footer {
 }
 
 .forecast-temp-max-color {
-  color: rgb(228, 65, 5);
+  color: rgb(255, 108, 99, 100%);
 }
 
 .forecast-icon {
